@@ -36,4 +36,26 @@ C.prototype.name = 'rose';
 
 console.log(new A().name + new B().name + new C().name);
 
+
+// question four
+
+var m = 1,
+    obj = {
+        m: 3,
+        getNumber: function(){
+            m *= 2;
+            return this.m *= 2;
+        }
+    };
+var    fn = obj.getNumber;
+obj.getNumber();
+console.log(fn());
+
 ```
+
+
+
+
+
+
+
