@@ -51,6 +51,12 @@ var    fn = obj.getNumber;
 obj.getNumber();
 console.log(fn());
 
+
+// question five: string reverse
+
+var str = 'abcdefg';
+console.log(str.split('').reverse().join(''));
+
 ```
 
 
