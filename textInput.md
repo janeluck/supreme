@@ -1,6 +1,6 @@
 ﻿# textInput事件与keypress事件
 
-Tags: javascript
+
 ---
 ####定义：
 > 当用户在可编辑区域中输入字符时，就会触发testInput这个事件。
