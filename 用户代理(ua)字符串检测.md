@@ -8,7 +8,7 @@
 var client = function () {
 
     var engine = {
-    // 呈现引擎
+        // 呈现引擎
         ie: 0,
         gecko: 0,
         webkit: 0,
@@ -37,7 +37,14 @@ var client = function () {
         win: false,
         mac: false,
         // Unix
-        x11: false
+        x11: false,
+        iphone: false,
+        ipod: false,
+        ipad: false,
+        ios: false,
+        android: false,
+        nokiaN: false,
+        winMobile: false
     };
 
     // 检测呈现引擎、浏览器
@@ -93,6 +100,25 @@ var client = function () {
     system.mac = p.indexOf("Mac") == 0;
     system.x11 = (p.indexOf("X11") == 0)    || (p.indexOf("Linux") == 0);
 
+    // 检测移动设备
+    system.iphone = ua.indexOf("iPhone") > -1;
+    system.ipod = ua.indexOf("iPod") > -1;
+    system.ipad = ua.indexOf("iPad") > -1;
+
+    // 检测ios版本
+    if (system.mac && ua.indexOf("Mobile") > -1){
+        if (/CPU (?:iPhone )?OS (\d+_\d+)/.test(ua)){
+            system.ios = parseFloat(RegExp.$1.replace("_", "."));
+        } else {
+            system.ios = 2; // 不能真正检测出来，所以只能猜测
+        }
+    }
+
+    // 检测Andriod版本
+    if (/Android (\d+\.\d+)/.test(ua)){
+        system.android = parseFloat(RegExp.$1);
+    }
+
 
     return {
         engine: engine,
@@ -103,6 +129,9 @@ var client = function () {
 }()
 
 ```
+
+
+用户代理检测是客户端检测的最后一个选择。应该优先采用能力检测和怪癖检测
 
 
 
