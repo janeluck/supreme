@@ -1,4 +1,4 @@
-```js
+﻿```js
 // question one
 
 var test = (function(a){
@@ -56,6 +56,18 @@ console.log(fn());
 
 var str = 'abcdefg';
 console.log(str.split('').reverse().join(''));
+
+
+// question six: remove all instances of a value from an array, returning the original array
+
+Array.prototype.remove = function(item){
+    for(var i = this.length; i--;) {
+      if(this[i] === item) {
+        this.splice(i, 1);
+      }
+    }
+    return this;
+}
 
 ```
 
