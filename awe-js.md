@@ -1,4 +1,4 @@
-﻿```js
+```js
 // question one
 
 var test = (function(a){
@@ -68,6 +68,12 @@ Array.prototype.remove = function(item){
     }
     return this;
 }
+
+
+// question seven
+
+[]+{}; // '[object object]'
+{}+[]; // 0
 
 ```
 
