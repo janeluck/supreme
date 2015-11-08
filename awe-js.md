@@ -75,6 +75,21 @@ Array.prototype.remove = function(item){
 []+{}; // '[object object]'
 {}+[]; // 0
 
+
+// question eight: convert nodeslist to Array
+
+function convertToaArray(nodes) {
+    var arr;
+    try {
+        arr = Array.prototype.slice.call(nodes);
+    } catch (e) {
+        arr = [];
+        for (var i = 0, len = nodes.length; i < len; i++ ){
+            arr.push(nodes[i])
+        }
+    }
+    return arr;
+}
 ```
 
 
