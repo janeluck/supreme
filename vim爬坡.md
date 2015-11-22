@@ -46,6 +46,15 @@
 |:u1\|u|撤销所有的改变|
 |w|保存修改|
 |:saveas|~/some/path/: 将文件另保存到其他位置|
+|:s/sea/sky/|替换当前行第一个sea为sky|
+|:s/sea/sky/g|替换当前行所有sea为sky|
+|:n,\$s/sea/sky|替换第n行开始到最后一行中每一行第一个sea为sky|
+|:n,\$s/sea/sky/g|替换第n行开始到最后一行中每一行所有sea为sky|
+|:.,\$s/sea/sky/g|替换当前行开始到最后一行中每一行所有sea为sky|
+|:%s/sea/sky/|替换每一行的第一个sea为sky|
+|:%s/sea/sky/g|替换每一行中所有sea为sky|
+
+
 
 
 
