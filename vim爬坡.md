@@ -48,6 +48,7 @@
 |:saveas|~/some/path/: 将文件另保存到其他位置|
 |:s/vivian/sky/|替换当前行第一个vivian为sky|
 |:s/vivian/sky/g|替换当前行所有vivian为sky|
+|:n,ms/vivian/sky|替换第n行开始到m行中每一行第一个vivan为sky|
 |:n,\$s/vivian/sky|替换第n行开始到最后一行中每一行第一个vivan为sky|
 |:n,\$s/vivian/sky/g|替换第n行开始到最后一行中每一行所有vivian为sky|
 |:.,\$s/vivian/sky/g|替换当前行开始到最后一行中每一行所有vivian为sky|
