@@ -92,5 +92,6 @@
 
 ###4. 高频常用
 + `daw`, `yaw`
++ `d2w`, `2dw`, `dw.`.按下u后，前两者恢复，最后一个只能恢复一个单词
 
-
+we are awesome bingo
