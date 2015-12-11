@@ -28,5 +28,23 @@ notifyMessage("Hi!", {}, function (error, notification) {
     console.log(notification);// 通知对象
 });
 
+// notification as promise
+
+ var msgNotice = function(){
+    return  new Promise(function(resolve, reject){
+        Notification.requestPermission(function(status){
+            if (status == 'granted'){
+                resolve();
+            } else {
+                reject();
+            }
+        })
+    })
+};
+msgNotice().then(function(){
+        new Notification('Hi');
+    }, function(){
+        alert('user denied');
+})
 
 ```
