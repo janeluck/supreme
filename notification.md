@@ -29,22 +29,30 @@ notifyMessage("Hi!", {}, function (error, notification) {
 });
 
 // notification as promise
-
  var msgNotice = function(){
     return  new Promise(function(resolve, reject){
-        Notification.requestPermission(function(status){
-            if (status == 'granted'){
-                resolve();
-            } else {
-                reject();
-            }
-        })
+        if (Notification && Notification.permission === 'granted') {
+            resolve();
+        } else if(Notification.requestPermission){
+            Notification.requestPermission(function(status){
+
+                if (Notification.permission !== status) {
+                    Notification.permission = status;
+                }
+
+                if (status == 'granted'){
+                    resolve();
+                } else {
+                    reject();
+                }
+            })
+        } 
     })
 };
 msgNotice().then(function(){
-        new Notification('Hi');
-    }, function(){
-        alert('user denied');
+    new Notification('Hi');
+}, function(){
+    alert('user denied');
 })
 
 ```
