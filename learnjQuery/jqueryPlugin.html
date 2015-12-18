@@ -15,7 +15,7 @@
         this.init(element, options);
     };
     $.fn.jane = function(options){
-        // why data?
+
         $(this).data('jane', new Jane(this, options))
     };
     $.fn.jane.prototype = Jane;
