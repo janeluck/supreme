@@ -1,6 +1,8 @@
 # supreme
 
-> **awesome frontend**
+ **awesome frontend**
+ 
+> 一次只做一件事, 并做好
 
 + 看源码的一些感想
 + 经常要复用的一些独立小模块
