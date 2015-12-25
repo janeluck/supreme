@@ -8,9 +8,18 @@
     + `no-cache`: 强制每次请求直接发送给源服务器，而不经过本地缓存版本的校验
     + `max-age=`: 从请求时间开始到过期时间之间的秒数
     
+    |--Cache-Control 指令--|--说明--|
+    |no-store|不允许缓存响应，每个请求必须获取完整的响应|
+    |max-age=86400|浏览器和任何中继缓存均可以将响应（如果不设置private）缓存长达一天|
+    |private, max-age=600|客户端浏览器只能将响应缓存最长 10 分钟（60 秒 x 10 分）|
+    
+    
 2. Last-Modified, Etag
     + Last-Modified/If-Modified-Since
     + ETag/If-None-Match
+    
+    
+    
     
 
 
