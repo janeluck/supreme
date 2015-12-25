@@ -3,14 +3,16 @@
 
 让浏览器做缓存需要给浏览器发送指定的Http头，告诉浏览器缓存策略
 
-1. Last-Modified, Etag, Expires
-
-2. Cache-Control
+1. Cache-Control
     + `no-store`: 强制缓存在任何情况下都不要保留任何副本
     + `no-cache`: 强制每次请求直接发送给源服务器，而不经过本地缓存版本的校验
     + `max-age=`: 从请求时间开始到过期时间之间的秒数
     
+2. Last-Modified, Etag
+    + Last-Modified/If-Modified-Since
+    + ETag/If-None-Match
     
+
 
 
 
