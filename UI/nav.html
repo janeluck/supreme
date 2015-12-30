@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://libs.useso.com/js/jquery/1.10.0/jquery.min.js"></script>
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav::before {
+            display: table;
+            content: " ";
+        }
+        .nav::after {
+            clear: both;
+            display: table;
+            content: " ";
+        }
+
+        .nav > li {
+            float: left;
+            position: relative;
+            display: block;
+        }
+        .tab-pane {
+            display: none;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+
+<div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" >
+        <li  class="active"><a href="#home">Home</a></li>
+        <li ><a href="#profile" >Profile</a></li>
+        <li ><a href="#messages" >Messages</a></li>
+        <li ><a href="#settings" >Settings</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div  class="tab-pane active" id="home">...home</div>
+        <div  class="tab-pane" id="profile">...profile</div>
+        <div  class="tab-pane" id="messages">...messags</div>
+        <div  class="tab-pane" id="settings">...settings</div>
+    </div>
+
+</div>
+<script>
+    // TODO: 切换逻辑待实现
+    $()
+</script>
+</body>
+</html>
