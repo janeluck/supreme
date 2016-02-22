@@ -336,9 +336,13 @@
 </script>
 
 <script>
-    $(function(){
-        $('input').inputValidation();
-    })
+
+    $('.sample-form').on( 'submit.app', function(event) {
+        event.preventDefault();
+    });
+
+    $('.sample-form input').inputValidation();
+
 
 </script>
 </body>
