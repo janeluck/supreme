@@ -89,7 +89,9 @@
                 $this.append(html);
                 // We now need to empty the title attribute to avoid the default browser behavior and showing it together with the tool-tip
                 $this.attr( 'title', '' );
-                //$('#'+id).css()
+                $('#'+id).css({
+                    'margin-top': ( ($this.outerHeight() + $('#' + id).outerHeight() ) * -1 )
+                });
 
             },
             destroy: function () {
@@ -106,7 +108,10 @@
                 $(this).children('.tooltip').fadeIn();
             },
             hide: function(options){
-                $(this).children('.tooltip').fadeOut();
+                $(this).children('.tooltip').stop().fadeOut();
+            },
+            hideAllToolTips: function(){
+                $('.tooltip').stop().hide();
             }
         };
 
