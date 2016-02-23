@@ -86,8 +86,7 @@
             },
             destroy: function () {
                 return this.each(function(){
-                    var $this = $(this),
-                            data = $this.data( 'tooltip' );
+                    var $this = $(this);
 
                     $this.removeData( 'tooltip' );
 
