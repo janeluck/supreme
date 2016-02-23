@@ -18,10 +18,10 @@
     </style>
 </head>
 <body>
-<div class="sample-wrap" title="best song ever" >
+<div class="sample-wrap" data-tip="best song ever" >
     one direction
 </div>
-<div class="sample-wrap">
+<div class="sample-wrap" title="pp">
     joe s
 </div>
 <script>
@@ -39,7 +39,7 @@
         var methods = {
             init: function(options){
                 var opt = {
-                    title: 'tooltip'
+                    dataToolTip: 'tip'
                 };
 
                 options = $.extend(opt, options);
@@ -53,9 +53,7 @@
                             target: $this
                         });
                         // create tooltip
-                        methods.create.call(this, {
-                            title: $this.attr('title') || options.title
-                        }, options);
+                        methods.create.call(this, options);
 
                         // bind mouseenter to show tooltip
                         $this.on('mouseenter.tooltip', function(){
@@ -73,14 +71,24 @@
 
 
             },
-            create: function(tooltipData, options){
+            create: function(options){
                 var $this = $(this);
                 if ($this.children('.tooltip').length) return;
+                var toolTipContent = '';
+
+                // Get the tool-tip content, and if it doesn't exist, default to the title attribute
+                if ( ! $this.data(options.dataToolTip) ) {
+                    toolTipContent = $this.attr( 'title' );
+                } else {
+                    toolTipContent = $this.data( options.dataToolTip );
+                }
 
                 var id ='tooltip' + '-' + helpers.generateID(),
 
-                        html = '<div id="'+id+'" class="tooltip" title="'+ tooltipData.title +'">' + tooltipData.title + '</div>';
+                        html = '<div id="'+id+'" class="tooltip" >' + toolTipContent + '</div>';
                 $this.append(html);
+                // We now need to empty the title attribute to avoid the default browser behavior and showing it together with the tool-tip
+                $this.attr( 'title', '' );
                 //$('#'+id).css()
 
             },
