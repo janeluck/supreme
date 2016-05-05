@@ -9,3 +9,4 @@ if [ -z $Input ]; then
 else
     echo "U enter $Input"
 fi
+exit 0
