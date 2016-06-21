@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC</title>
+    <style>
+        .wrap{
+            width: 200px;
+            display: inline-block;
+        }
+        .textWrap {
+            float: right;
+        }
+        .inputWrap {
+            overflow: hidden;
+
+        }
+        .input{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="textWrap">+</div>
+        <div class="inputWrap">
+            <input type="text" class="input">
+        </div>
+
+    </div>
+</body>
+</html>
