@@ -18,6 +18,15 @@
         .input{
             width: 100%;
         }
+        .parent{
+            color: cadetblue;
+        }
+        .child{
+            color: red;
+        }
+        .parent .child{
+            color: inherit;
+        }
     </style>
 </head>
 <body>
@@ -28,5 +37,8 @@
         </div>
 
     </div>
+
+
+    <div class="parent"><div class="child">it's a child</div></div>
 </body>
 </html>
