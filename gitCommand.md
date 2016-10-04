@@ -3,3 +3,4 @@
 + 把已经提交的改变放到缓存区:`git reset HEAD~1`或者`git reset --soft HEAD~1` 
 + 扔掉已经提交的change, 直接回退: `git reset --hard HEAD~1`
 
+#### revert
