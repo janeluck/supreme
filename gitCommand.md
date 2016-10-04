@@ -5,3 +5,6 @@
 
 #### revert
 + 用新的commit来修正之前的某版本的commit, 跨版本号的话会有冲突的问题需要解决 
+
+
+merge冲突后回退: 先add再commit, 然后reset
