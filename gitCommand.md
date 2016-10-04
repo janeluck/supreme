@@ -4,4 +4,4 @@
 + 扔掉已经提交的change, 直接回退: `git reset --hard HEAD~1`
 
 #### revert
-+ revert do ?
++ 用新的commit来修正之前的某版本的commit, 跨版本号的话会有冲突的问题需要解决 
