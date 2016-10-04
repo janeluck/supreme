@@ -8,3 +8,6 @@
 
 
 merge冲突后回退: 先add再commit, 然后reset
+
+
+#### diff(来源于unix命令diff)
