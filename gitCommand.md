@@ -4,3 +4,4 @@
 + 扔掉已经提交的change, 直接回退: `git reset --hard HEAD~1`
 
 #### revert
++ revert do ?
