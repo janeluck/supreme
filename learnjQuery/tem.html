@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://libs.useso.com/js/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="http://libs.useso.com/js/underscore.js/1.5.0/underscore-min.js"></script>
+</head>
+<body>
+<!--<script id="tem" type="text/html" >
+    <div id="<%= lightboxID %>-html" class="<%= htmlClass %>"><%= htmlContent %></div>
+</script>
+<script>
+
+    var a = _.template($('#tem').html(), {
+        lightboxID: 'lightbox01',
+        htmlClass: 'google',
+        htmlContent: 'bing'
+    })
+</script>-->
+<script>
+    var ck = {};
+    ck.ajax = function(options){
+        options = $.extend({
+            url: 'http://esn.jianyu.com'
+        }, options)
+        return $.ajax(options)
+    };
+
+
+</script>
+</body>
+</html>
